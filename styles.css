@@ -1,0 +1,162 @@
+body{
+    background-color: #a1a1a1;
+}
+
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    background-color: #63ACB6;
+    flex-direction: column;
+    display: flex;
+
+
+}
+.sidebar .nav-link {
+    color: rgb(255, 255, 255);  /* Color con transparencia */
+}
+
+.content {
+    margin-left: 180px;
+    padding: 20px;
+}
+
+
+h2{
+    font-size: 48px;
+
+}
+
+h3{
+    color: white;
+}
+
+.btn-custom {
+    color: white;
+    background-color: #ffa061; /* Color personalizado */
+    border-color: #00ddff23; /* Bordes del mismo color */
+}
+
+.btn-custom:hover {
+    background-color: #ffa061; /* Color al pasar el cursor */
+    border-color: #00444f;
+}
+
+.btn-custom:active {
+    background-color: #ffa061; /* Color al hacer clic */
+    border-color: #00444f;
+}
+
+.btn-custom:focus {
+    background-color: #ffa061; /* Color al hacer clic */
+    border-color: #00444f;
+}
+
+
+        /* Estilos para el contenedor del spinner */
+#loadingSpinner {
+    display: flex; /* Oculto por defecto */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    font-size: 18px;
+    color: #333;
+}
+
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #db3434;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.d-flex .gap-3{
+    padding: 20px, 8px;
+}
+
+.titulo_tab1{
+    text-align: center;
+    color: #a1a1a1;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+#ventasdiarias-container {
+    display: flex; /* Hace que el contenedor sea flexible */
+    justify-content: left; /* Centra el canvas horizontalmente */
+    align-items: center; /* Centra el canvas verticalmente */
+    width: 100%; /* Ocupa un tercio del ancho del contenedor */
+    height: auto; /* Mantiene la proporción del gráfico */
+    background-color: #ffffffd2;
+    border-radius: 20px; /* Añadir esquinas redondeadas */
+
+
+}
+
+#ventasChartfiltered-container {
+    display: flex; /* Hace que el contenedor sea flexible */
+    justify-content: left; /* Centra el canvas horizontalmente */
+    align-items: center; /* Centra el canvas verticalmente */
+    width: 100%; /* Ocupa un tercio del ancho del contenedor */
+    height: auto; /* Mantiene la proporción del gráfico */
+    background-color: #ffffffd2;
+    border-radius: 20px; /* Añadir esquinas redondeadas */
+
+
+}
+
+
+
+/* Submenú oculto inicialmente */
+.submenu {
+    max-height: 0; /* Altura inicial en 0 */
+    overflow: hidden; /* Ocultar contenido que excede la altura */
+    padding-left: 15px; /* Añadir padding para indentación */
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out; /* Transición suave para la altura y opacidad */
+    opacity: 0; /* Ocultar el submenú con opacidad */
+    margin: 0; /* Asegurarse de que no tenga margen extra */
+}
+
+/* Espaciado uniforme para todos los elementos */
+.nav-link {
+    margin: 5px 0; /* Añadir un margen uniforme a todos los elementos de la navegación */
+}
+
+/* Submenú visible cuando está activo */
+.submenu.active {
+    max-height: 300px; /* Ajustar a la altura necesaria para mostrar todos los elementos */
+    opacity: 1; /* Hacer visible el submenú */
+}
+        
+
+        /* El texto se empuja hacia abajo usando "margin-top: auto" */
+        .bottom-text {
+            color: #cccccc;
+            font-size: 10px;
+            margin-top: auto; /* Empuja este elemento hacia el fondo del sidebar */
+            text-align: right; /* Alinear el texto a la derecha */
+            padding-right: 10px;
+            padding-bottom: 5px;
+        }
+
+        .bottom-text a {
+            color: #cccccc; /* Color del enlace en el footer */
+            text-decoration: none; /* Eliminar el subrayado del enlace */
+        }
+
+        .bottom-text a:hover {
+            color: #00aaff; /* Cambiar color del enlace al pasar el ratón */
+            text-decoration: underline; /* Añadir subrayado al pasar el ratón */
+        }
